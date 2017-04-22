@@ -1,0 +1,2 @@
+- name: Fancy Ansible Role Debug
+  debug: msg="HELLO WORLD"
