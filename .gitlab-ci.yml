@@ -21,4 +21,4 @@ test-plan:
     - ansible-playbook --syntax-check playbook.yml
     - ansible apache -m setup 
     - ansible-playbook playbook.yml --limit apache
-    - wget http://ansible-ci__ubuntu14
+    - curl http://ansible-ci__ubuntu14
