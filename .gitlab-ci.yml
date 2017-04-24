@@ -17,6 +17,7 @@ test-plan:
     - echo '[webserver]' >> /etc/ansible/hosts
     - echo 'ansible-ci__ubuntu14' >> /etc/ansible/hosts
     - ansible all -m ping
+    - ansible ansible-ci__ubuntu14 --sudo -m raw -a "yum install -y python2 python-simplejson" 
     - cat /etc/ansible/hosts
     - rsync -ar --exclude=.git --exclude=roles . roles/fancy-ansible-role
     - ansible-playbook --syntax-check playbook.yml
