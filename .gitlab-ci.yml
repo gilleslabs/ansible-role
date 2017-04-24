@@ -11,6 +11,7 @@ test-plan:
     - mkdir -p roles/apache
     - apt-get install rsync -y
     - apt-get install sshpass -y
+    - apt-get install curl -y
     - ssh-keygen -t rsa -C "ansible@soprasteria.com" -N "" -f /root/.ssh/id_rsa
     - sshpass -p 'root' ssh-copy-id -o StrictHostKeyChecking=no root@ansible-ci__ubuntu14
     - echo '[apache]' >> /etc/ansible/hosts
